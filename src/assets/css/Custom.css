@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+/* ////////Common Element Styling////////// */
+.theme_btn {
+    background-color: #ED213A;
+    border-style: none; 
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+    color: white;
+}
+/* /////////Hero Section //////////// */
+
+.hero_container {
+    position: relative;
+    max-width: 100%;
+  }
+/* /////////////NavBar///////////// */
+.navbar_logo {
+    width: 111px;
+    height: 103px;
+}
+.nav_li_item {
+    font-size: 20px;
+    font-weight: 600;
+}
+.intro_sec {
+    position: absolute;
+    width: 954px;
+    height: 324px;
+    left: 146px;
+    top: 284px;
+}
+.super_heading {
+    font-family: "Zen Dots", sans-serif;
+    font-size: 90px;
+    font-weight: 400px;
+    color: #ffffff;
+}
+.hero_para {
+    font-weight: 400;
+    font-size: 24.5827px;
+}
+.navbar_logo, .nav_li_item, .theme_btn, .intro_sec {
+    z-index: 10;
+}
+@media (max-width: 1280px) {
+    .nav_li_item {
+        font-size: 16px;
+    }
+    .theme_btn {
+        font-size: 16px;
+    }
+    .super_heading {
+        font-size: 60px;  
+    }
+    .intro_sec {
+        position: absolute;
+        width: 954px;
+        height: 324px;
+        left: 50px;
+        top: 224px;
+    }
+}
+.hero_container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    opacity: 0.4;
+    z-index: 1;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #000 95%);
+}
+
+
+/* ///////////About Section//////////// */
+
+.image_container {
+    position: relative;
+  }
+  
+.about_image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+.image_container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 0%);
+}
+.about_info {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+/* //////////Reward Section////////////// */
+#Reward_Section {
+    background-color: black;
+}
+.reward_container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .strip {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: #ea0040; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .strip_2 {
+    transform: rotate(-5deg); 
+    top: 40%;
+    
+  }
+  
+  .strip_1 {
+    transform: rotate(13deg);
+    top: 42%; 
+  }
+  
+  .text {
+    font-family: "Zen Dots", sans-serif;
+    position: absolute;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  @keyframes moveText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+  
+/* ////////////////Popular NFT'S/////////////////// */
+#Popular_NFTS {
+    background-color: black;
+}
+
+.nft_heading {
+    font-size: 48px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Zen Dots"
+}
+
+.nft_parah {
+    font-size: 20.58px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "inter";
+    padding-bottom: 20px;
+}
+
+.img1 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+}
+
+.img1 img {
+    width: 100%;
+    transition: 0.8s all ease-in-out;
+}
+
+.img1:hover img {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.red_box {
+    width: 100%;
+    background-color: rgba(253, 22, 64, .5);
+    border: 2px solid #ED213A;
+    position: absolute;
+    top: 100px;
+    transition: 0.8s all ease-in-out;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    opacity: 0;  
+}
+
+.text_img1 {
+    position: absolute;
+    z-index: 2;
+    transition: 5s all ease-in-out;
+    bottom: 10px;
+    left: 20px;
+}
+
+.text_img1 h1 {
+    color: #FFFFFF;
+    opacity: 0;
+}
+
+.text_img1 p {
+    color: #FFFFFF;
+    opacity: 0;
+}
+
+.img1:hover .text_img1 h1 {
+    font-family: "Zen Dots";
+    font-size: 32px;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.img1:hover .text_img1 p {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.img1:hover .text_img1 p span {
+    color: #ED213A;
+}
+
+.img1:hover .red_box {
+    color: rgba(253, 22, 64, .5);
+    opacity: 1;
+    top: 0;
+    width: 100%;
+    height: 96%;
+    max-width: 97%;
+    max-height: 98%;
+    margin-top: 15px;
+}
+
+.img2 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+}
+
+.img2 img {
+    width: 100%;
+    transition: 0.8s all ease-in-out;
+}
+
+.img2:hover img {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.text_img1 {
+    position: absolute;
+    z-index: 2;
+    transition: 5s all ease-in-out;
+    bottom: 10px;
+    left: 20px;
+}
+
+.text_img1 h1 {
+    color: #FFFFFF;
+    opacity: 0;
+}
+
+.text_img1 p {
+    color: #FFFFFF;
+    opacity: 0;
+}
+
+.img2:hover .text_img1 h1 {
+    font-family: "Zen Dots";
+    font-size: 32px;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.img2:hover .text_img1 p {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.img2:hover .text-img1 p span {
+    color: #ED213A;
+}
+
+.img2:hover .red_box {
+    color: rgba(253, 22, 64, .5);
+    opacity: 1;
+    top: 0;
+    width: 100%;
+    height: 94%;
+    max-width: 96%;
+    max-height: 98%;
+    margin-top: 10px;
+}
+
+/* ///////////Road Map ////////////// */
+#RoadMap_Section {
+    background-color: #000;
+}
+.roadmap_section{
+    padding-top: 100px;
+    margin: 0 50px 0 50px;
+}
+.roadmap_heading{
+    font-size: 50px;
+    font-weight: 400;
+    font-family: "Zen Dots";
+    color: #FFFFFF;
+    text-align: center;
+}
+.roadmap_heading span{
+    color:#ED213A;
+}
+.roadmap_inner p{
+    font-family: "inter";
+    font-size: 24.58px;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+}
+.phase_section{
+    padding-top: 150px;
+}
+.point{
+    width: 32px;
+}
+
+.phases{
+    position: relative;
+    width: 100%;
+}
+.phase_title{
+    background-color: #54071c;
+    font-family: "Zen Dots";
+    font-size: 20px;
+    font-weight: 400;
+    color: #ED213A;
+    padding: 10px 20px;
+    width: 562px;
+}
+
+.list_items{
+    background-color: #ED213A;
+    padding: 10px 60px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-family: "Inter";
+    position: relative;
+    z-index: 2 !important;
+
+}
+.image_men{
+    right: 55px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 3 !important;
+    
+}
+.back_img{
+    position: absolute;
+    right: 5px;
+    bottom: 160px;
+    z-index: 1 !important;
+   
+}
+.img_men_size{
+    width: 300px;
+}
+.back_img_size{
+    width: 400px;
+}
+
+.phase_title_2{
+    background-color: #54071c;
+    font-family: "Zen Dots";
+    font-size: 20px;
+    font-weight: 400;
+    color: #ED213A;
+    padding: 10px 20px;
+    width: 562px;
+    margin-left: 440px;
+}
+.list_items_2{
+    background-color: #ED213A;
+    padding: 10px 60px 0 440px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-family: "Inter";
+    position: relative;
+    z-index: 2 !important;
+}
+.image_men_2{
+    left: 55px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 3;
+}
+.back_img_2{
+    position: absolute;
+    left: 5px;
+    bottom: 160px;
+    z-index: 1 !important;
+} 
+.back_img_3 {
+    position: absolute;
+    left: 5px;
+    bottom: -12px;
+    z-index: 1 !important;
+}
+
+/* //////////////Footer///////////// */
+#FAQ_Section {
+    background-color: #000;
+    background-image: url(../images//footer_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 150px 0px;
+}
+.faq_section {
+    width: 40%;
+    color: white;
+    padding-top: 100px;
+}
+.faq_container {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.faq_section h1 {
+    font-family: "Zen Dots", sans-serif;
+    font-size: 2em;
+  }
+  
+.faq_section p {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+.tab {
+    font-family: "Zen Dots", sans-serif;
+    font-size: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+.tab.active {
+    border-bottom: 3px solid #FD1640;
+  }
+  
+.questions {
+    text-align: left;
+  }
+  
+.question_container {
+    margin-bottom: 10px;
+  }
+  
+.question {
+    font-family: "Zen Dots", sans-serif;
+    padding: 10px;
+    color: #FD1640;
+    background-color: #940d28;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+.question_open {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+} 
+  .answer {
+    font-size: 14px;
+    padding: 10px;
+    background-color: #940d28;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+.arrow_icon {
+    font-size: 20px;
+}
+.faq_right {
+    width: 40%;
+}
